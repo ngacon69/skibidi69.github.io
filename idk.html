@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>u gay!</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 100px;
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            position: relative;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 36px;
+            color: #e91e63;
+        }
+        button {
+            font-size: 24px;
+            margin: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            background-color: #ffc107;
+            color: #000;
+            transition: 0.3s ease;
+            display: inline-block; /* Đặt nút hiển thị ngang hàng */
+        }
+        button:hover {
+            background-color: #ff9800;
+        }
+        #noBtn {
+            left: 50px;
+            top: 200px;
+            position: absolute;
+        }
+        .btn {
+            left: 50px;
+            top: 100px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>MÀY CÓ GAY KO?</h1> 
+    
+    <button onclick="alert('Biết mà')">CÓ</button>
+    <button class="btn" id="noBtn">KHÔNG</button>
+
+    <script>
+        function moveButton() {
+            const noButton = document.getElementById("noBtn");
+            const maxWidth = window.innerWidth - noButton.offsetWidth;
+            const maxHeight = window.innerHeight - noButton.offsetHeight;
+
+            const randomX = Math.random() * maxWidth;
+            const randomY = Math.random() * maxHeight;
+
+            noButton.style.left = randomX + 'px';
+            noButton.style.top = randomY + 'px';
+        }
+
+        document.getElementById("noBtn").onclick = moveButton;
+    </script>
+
+</body>
+</html>
